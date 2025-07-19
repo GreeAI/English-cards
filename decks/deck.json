@@ -1,0 +1,58 @@
+[
+    {
+        "en": "Hello",
+        "id": 1,
+        "nextReview": 1755338428,
+        "ru": "Привет",
+        "sr": 5
+    },
+    {
+        "en": "Hi",
+        "id": 2,
+        "nextReview": 1753005628,
+        "ru": "Ку",
+        "sr": 0
+    },
+    {
+        "en": "desire",
+        "id": 3,
+        "nextReview": 1753005628,
+        "ru": "желание",
+        "sr": 0
+    },
+    {
+        "en": "beliefs",
+        "id": 4,
+        "nextReview": 1753005628,
+        "ru": "убеждения",
+        "sr": 0
+    },
+    {
+        "en": "Smoke",
+        "id": 5,
+        "nextReview": 1753005628,
+        "ru": "Дым",
+        "sr": 0
+    },
+    {
+        "en": "Smoker",
+        "id": 6,
+        "nextReview": 1753005628,
+        "ru": "Курильщик",
+        "sr": 0
+    },
+    {
+        "en": "Dog",
+        "id": 7,
+        "nextReview": 1753005628,
+        "ru": "Собака",
+        "sr": 0
+    },
+    {
+        "en": "gfgdf",
+        "id": 8,
+        "nextReview": 1753015334,
+        "ru": "gd",
+        "sr": 0
+    }
+]
