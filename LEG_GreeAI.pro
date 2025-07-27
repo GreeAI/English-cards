@@ -1,4 +1,5 @@
 QT       += core gui
+LIBS += -lespeak-ng
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,13 +14,14 @@ SOURCES += \
     src/cardsui.cpp \
     src/main.cpp \
     src/leg.cpp \
-    src/processingCards.cpp
+    src/processingCards.cpp \
 
 HEADERS += \
     src/SR.h \
     src/addword.h \
     src/cards.h \
     src/cardsui.h \
+    src/eSpeakNG.h \
     src/leg.h \
     src/processingCards.h
 
@@ -32,3 +34,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

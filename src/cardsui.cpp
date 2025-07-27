@@ -1,29 +1,40 @@
 #include "cardsui.h"
 #include "ui_cardsui.h"
+#include "eSpeakNG.h"
 
 #include <QMessageBox>
 #include "cstdint"
 
-cardsui::cardsui(QWidget *parent)
+cardsui::cardsui(CardsProcessingLEG &cpLEG, QWidget *parent)
     : QDialog(parent)
+    , cpLEG_(cpLEG)
     , ui(new Ui::cardsui)
 {
     ui->setupUi(this);
+
+    setFixedSize(350, 600);
+    setWindowFlag(Qt::WindowMaximizeButtonHint, false);
+    setWindowFlag(Qt::WindowMinimizeButtonHint, false);
+
     start();
 }
 
 cardsui::~cardsui()
 {
     delete ui;
+    cpLEG_.updateDeckAfterRepeat(cards_);
 }
 
 void cardsui::start() {
     cards_ = cpLEG_.startRepeat();
     if(cards_.empty()) {
-        ui->lbl_error->setText("Нет карточек для повторения");
+        QMessageBox::information(this, "Информация", "Нет карточек для повторения");
+        this->close();
+        return;
     }
     else {
         showCurrentCard();
+        currentCardIndex_++;
     }
 }
 
@@ -31,41 +42,88 @@ void cardsui::showCurrentCard() {
     if (currentCardIndex_ < cards_.size()) {
         const Card& current = cards_[currentCardIndex_];
         ui->lbl_eng->setText(QString::fromStdString(current.en));
-        int newSR = ui->le_sr->text().toInt();
-        if(newSR <= 5 || newSR >= 1) {
-            cards_[currentCardIndex_].sr = static_cast<uint8_t>(newSR);
-        }
-        else {
-            cards_[currentCardIndex_].sr = 1;
-        }
     } else {
         QMessageBox::information(this, "Информация", "Карточки закончились");
-        cpLEG_.updateDeckAfterRepeat(cards_);
+        this->close();
+        return;
     }
+
+    showCards_++;
 }
 
-void cardsui::on_pb_next_clicked()
-{
-    currentCardIndex_++;
-    showCurrentCard();
-    ui->lbl_ru->setText("Перевод");
-}
-
-
-void cardsui::on_pb_stop_clicked()
-{
-    cpLEG_.updateDeckAfterRepeat(cards_);
-    close();
-}
-
-
-void cardsui::on_pb_translate_clicked()
-{
-    if(cards_.empty()){
+void cardsui::showTranslate() {
+    if(cards_.empty() || showCards_ >= cards_.size()){
         QMessageBox::information(this, "Информация", "Нет карточек на сегодня");
         return;
     }
-    const Card& current = cards_[currentCardIndex_];
+
+    const Card& current = cards_[showCards_];
     ui->lbl_ru->setText(QString::fromStdString(current.ru));
+}
+
+void cardsui::changeSR(const uint8_t newSR) {
+    if(cards_.empty() || showCards_ >= cards_.size()) {
+        QMessageBox::information(this, "Информация", "Сегодня нет карточек для повторения");
+        this->close();
+        ui->lbl_eng->setText("Нет слов для повторения");
+        return;
+    }
+    cards_[showCards_].sr = newSR;
+
+    showCurrentCard();
+    currentCardIndex_++;
+    ui->lbl_ru->setText("Перевод");
+}
+
+void cardsui::speakEngWord()
+{
+    if(cards_.empty() || showCards_ >= cards_.size()) {
+        QMessageBox::information(this, "Информация", "Нет слов для озвучивания!");
+        return;
+    }
+    std::string englishWord = cards_[showCards_].en;
+    speakText(englishWord);
+
+}
+
+void cardsui::on_pb_stop_clicked()
+{
+    close();
+}
+
+void cardsui::on_pb_translate_clicked()
+{
+    showTranslate();
+}
+
+void cardsui::on_pb_sr_1_clicked()
+{
+    changeSR(1);
+}
+
+void cardsui::on_pb_sr_2_clicked()
+{
+    changeSR(2);
+}
+
+void cardsui::on_pb_sr_3_clicked()
+{
+    changeSR(3);
+}
+
+void cardsui::on_pb_sr_4_clicked()
+{
+   changeSR(4);
+}
+
+void cardsui::on_pb_sr_5_clicked()
+{
+    changeSR(5);
+}
+
+
+void cardsui::on_pushButton_clicked()
+{
+    speakEngWord();
 }
 

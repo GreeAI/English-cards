@@ -8,7 +8,13 @@ using json = nlohmann::json;
 const uint8_t InitialValueSR = 1;
 const time_t SecondOneDay = 86400; // second in one day
 
-CardsProcessingLEG::CardsProcessingLEG(){}
+CardsProcessingLEG::CardsProcessingLEG(std::string &nameDeck) {
+    pathDeck_ = "../../decks/";
+    pathDeck_ += nameDeck;
+    pathDeck_ += ".json";
+
+    std::cout << pathDeck_;
+}
 
 void CardsProcessingLEG::saveCardsInDeck(const Card& card) {
     json data = loadCard();
@@ -29,7 +35,7 @@ void CardsProcessingLEG::saveCardsInDeck(const Card& card) {
 }
 
 void CardsProcessingLEG::saveDeckInJsonConst(const json& deck) {
-    std::ofstream file("/../decks/deck.json", std::ios::trunc);
+    std::ofstream file(pathDeck_, std::ios::trunc);
     if(file.is_open()) {
         file << deck.dump(4);
     } else {
@@ -38,7 +44,7 @@ void CardsProcessingLEG::saveDeckInJsonConst(const json& deck) {
 }
 
 void CardsProcessingLEG::saveDeckInJson(json& deck) {
-    std::ofstream file("../../decks/deck.json", std::ios::trunc);
+    std::ofstream file(pathDeck_, std::ios::trunc);
     if(file.is_open()) {
         file << deck.dump(4);
     } else {
@@ -47,7 +53,7 @@ void CardsProcessingLEG::saveDeckInJson(json& deck) {
 }
 
 json CardsProcessingLEG::loadCard() {
-    std::ifstream file("../../decks/deck.json");
+    std::ifstream file(pathDeck_);
     if (!file.is_open()) {
         throw std::runtime_error("Failed to open deck.json for reading");
     }
@@ -61,7 +67,7 @@ json CardsProcessingLEG::loadCard() {
 }
 
 void CardsProcessingLEG::removeCardFromId(const uint16_t id) {
-    std::fstream file("../../decks/deck.json");
+    std::fstream file(pathDeck_);
     json deck = loadCard();
 
     auto it = std::find_if(deck.begin(), deck.end(),

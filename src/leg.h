@@ -16,7 +16,7 @@ class LEG : public QMainWindow
     Q_OBJECT
 
 public:
-    LEG(QWidget *parent = nullptr);
+    LEG(std::string name = "deck", QWidget *parent = nullptr);
     ~LEG();
 
 private slots:
@@ -24,7 +24,13 @@ private slots:
 
     void on_pb_start_clicked();
 
+    void on_le_choiceDeck_textChanged(const QString &arg1);
+
 private:
     Ui::LEG *ui;
+    std::string nameDeck_;
+    CardsProcessingLEG cpLEG_;
+
+    void setBackgroundWidget();
 };
 #endif // LEG_H

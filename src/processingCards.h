@@ -11,7 +11,7 @@ using json = nlohmann::json;
 class CardsProcessingLEG {
 public:
 
-    CardsProcessingLEG();
+    CardsProcessingLEG(std::string &nameDeck);
 
     void saveCardsInDeck(const Card& card);
     json loadCard();
@@ -33,6 +33,7 @@ public:
 private:
     size_t count_id_ = 0;
     std::vector<Card> cards_for_repeat_;
+    std::string pathDeck_;
 };
 
 #endif // PROCESSINGCARDS_H

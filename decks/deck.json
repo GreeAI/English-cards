@@ -9,50 +9,225 @@
     {
         "en": "Hi",
         "id": 2,
-        "nextReview": 1753005628,
+        "nextReview": 1755338428,
         "ru": "Ку",
-        "sr": 0
-    },
-    {
-        "en": "desire",
-        "id": 3,
-        "nextReview": 1753005628,
-        "ru": "желание",
-        "sr": 0
-    },
-    {
-        "en": "beliefs",
-        "id": 4,
-        "nextReview": 1753005628,
-        "ru": "убеждения",
-        "sr": 0
+        "sr": 5
     },
     {
         "en": "Smoke",
         "id": 5,
-        "nextReview": 1753005628,
+        "nextReview": 1755529843,
         "ru": "Дым",
-        "sr": 0
+        "sr": 5
     },
     {
         "en": "Smoker",
         "id": 6,
-        "nextReview": 1753005628,
+        "nextReview": 1755529843,
         "ru": "Курильщик",
-        "sr": 0
+        "sr": 5
     },
     {
         "en": "Dog",
         "id": 7,
-        "nextReview": 1753005628,
+        "nextReview": 1755529843,
         "ru": "Собака",
-        "sr": 0
+        "sr": 5
     },
     {
-        "en": "gfgdf",
+        "en": "card",
+        "id": 11,
+        "nextReview": 1755597414,
+        "ru": "карта",
+        "sr": 5
+    },
+    {
+        "en": "fghghhhh",
+        "id": 15,
+        "nextReview": 1754421386,
+        "ru": "fghgg",
+        "sr": 4
+    },
+    {
+        "en": "fghghhhhfghfgh",
+        "id": 16,
+        "nextReview": 1754421386,
+        "ru": "fghgggfhfghf",
+        "sr": 4
+    },
+    {
+        "en": "fghghhhhfghfghfghfghf",
+        "id": 17,
+        "nextReview": 1754421386,
+        "ru": "fghgggfhfghfgfhghfgh",
+        "sr": 4
+    },
+    {
+        "en": "fork",
+        "id": 9,
+        "nextReview": 1753645189,
+        "ru": "вилка",
+        "sr": 2
+    },
+    {
+        "en": "sink",
+        "id": 10,
+        "nextReview": 1753645189,
+        "ru": "тонуть",
+        "sr": 2
+    },
+    {
+        "en": "desire",
+        "id": 3,
+        "nextReview": 1753645189,
+        "ru": "желание",
+        "sr": 2
+    },
+    {
+        "en": "beliefs",
+        "id": 4,
+        "nextReview": 1753645189,
+        "ru": "убеждения",
+        "sr": 2
+    },
+    {
+        "en": "fgh",
+        "id": 12,
+        "nextReview": 1755805189,
+        "ru": "fgh",
+        "sr": 5
+    },
+    {
+        "en": "fghg",
+        "id": 13,
+        "nextReview": 1755805189,
+        "ru": "fgh",
+        "sr": 5
+    },
+    {
+        "en": "fghghh",
+        "id": 14,
+        "nextReview": 1755805189,
+        "ru": "fghg",
+        "sr": 5
+    },
+    {
+        "en": "123",
+        "id": 18,
+        "nextReview": 1755805189,
+        "ru": "123",
+        "sr": 5
+    },
+    {
+        "en": "А fearlessness",
+        "id": 28,
+        "nextReview": 1753646262,
+        "ru": "Бесстрашие",
+        "sr": 2
+    },
+    {
+        "en": "spoon",
         "id": 8,
-        "nextReview": 1753015334,
-        "ru": "gd",
-        "sr": 0
+        "nextReview": 1753872409,
+        "ru": "ложка",
+        "sr": 2
+    },
+    {
+        "en": "to abhor",
+        "id": 19,
+        "nextReview": 1753699609,
+        "ru": "Ненавидеть",
+        "sr": 1
+    },
+    {
+        "en": "to abrogate",
+        "id": 20,
+        "nextReview": 1753699609,
+        "ru": "Отменить",
+        "sr": 1
+    },
+    {
+        "en": "to abstain",
+        "id": 21,
+        "nextReview": 1753699609,
+        "ru": "Воздержаться",
+        "sr": 1
+    },
+    {
+        "en": "To strengthen",
+        "id": 22,
+        "nextReview": 1753699609,
+        "ru": "Укрепить, усилить",
+        "sr": 1
+    },
+    {
+        "en": "To desist",
+        "id": 23,
+        "nextReview": 1753699609,
+        "ru": "Запретить",
+        "sr": 1
+    },
+    {
+        "en": "To yield",
+        "id": 24,
+        "nextReview": 1753699609,
+        "ru": "Уступить",
+        "sr": 1
+    },
+    {
+        "en": "To further",
+        "id": 25,
+        "nextReview": 1753699609,
+        "ru": "Продолжать",
+        "sr": 1
+    },
+    {
+        "en": "Commotion",
+        "id": 26,
+        "nextReview": 1753699609,
+        "ru": "Суета",
+        "sr": 1
+    },
+    {
+        "en": "devotion",
+        "id": 27,
+        "nextReview": 1753699609,
+        "ru": "Преданность",
+        "sr": 1
+    },
+    {
+        "en": "Hello eSpeak",
+        "id": 29,
+        "nextReview": 1756036429,
+        "ru": "g",
+        "sr": 5
+    },
+    {
+        "en": "Hello World!",
+        "id": 30,
+        "nextReview": 1756036558,
+        "ru": "f",
+        "sr": 5
+    },
+    {
+        "en": "Hello Vlad",
+        "id": 31,
+        "nextReview": 1756036937,
+        "ru": "f",
+        "sr": 5
+    },
+    {
+        "en": "Around",
+        "id": 32,
+        "nextReview": 1753884526,
+        "ru": "вокруг, вблизи, около, кругом",
+        "sr": 2
+    },
+    {
+        "en": "Take",
+        "id": 33,
+        "nextReview": 1753884636,
+        "ru": "Брать, взять, захват, сбор",
+        "sr": 2
     }
 ]
