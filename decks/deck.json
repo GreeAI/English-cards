@@ -63,34 +63,6 @@
         "sr": 4
     },
     {
-        "en": "fork",
-        "id": 9,
-        "nextReview": 1753645189,
-        "ru": "вилка",
-        "sr": 2
-    },
-    {
-        "en": "sink",
-        "id": 10,
-        "nextReview": 1753645189,
-        "ru": "тонуть",
-        "sr": 2
-    },
-    {
-        "en": "desire",
-        "id": 3,
-        "nextReview": 1753645189,
-        "ru": "желание",
-        "sr": 2
-    },
-    {
-        "en": "beliefs",
-        "id": 4,
-        "nextReview": 1753645189,
-        "ru": "убеждения",
-        "sr": 2
-    },
-    {
         "en": "fgh",
         "id": 12,
         "nextReview": 1755805189,
@@ -117,13 +89,6 @@
         "nextReview": 1755805189,
         "ru": "123",
         "sr": 5
-    },
-    {
-        "en": "А fearlessness",
-        "id": 28,
-        "nextReview": 1753646262,
-        "ru": "Бесстрашие",
-        "sr": 2
     },
     {
         "en": "spoon",
@@ -229,5 +194,47 @@
         "nextReview": 1753884636,
         "ru": "Брать, взять, захват, сбор",
         "sr": 2
+    },
+    {
+        "en": "fork",
+        "id": 9,
+        "nextReview": 1753952210,
+        "ru": "вилка",
+        "sr": 2
+    },
+    {
+        "en": "sink",
+        "id": 10,
+        "nextReview": 1753952210,
+        "ru": "тонуть",
+        "sr": 2
+    },
+    {
+        "en": "desire",
+        "id": 3,
+        "nextReview": 1753952210,
+        "ru": "желание",
+        "sr": 2
+    },
+    {
+        "en": "beliefs",
+        "id": 4,
+        "nextReview": 1753952210,
+        "ru": "убеждения",
+        "sr": 2
+    },
+    {
+        "en": "А fearlessness",
+        "id": 28,
+        "nextReview": 1753952210,
+        "ru": "Бесстрашие",
+        "sr": 2
+    },
+    {
+        "en": "Vlad",
+        "id": 34,
+        "nextReview": 1756114449,
+        "ru": "Гладик",
+        "sr": 5
     }
 ]

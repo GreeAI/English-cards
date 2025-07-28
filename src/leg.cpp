@@ -19,6 +19,7 @@ LEG::LEG(std::string name, QWidget *parent)
 
     setBackgroundWidget();
     ui->lbl_how_deck->setText(QString::fromStdString(name));
+    ui->lbl_how_deck->setAlignment(Qt::AlignCenter);
 
 }
 
