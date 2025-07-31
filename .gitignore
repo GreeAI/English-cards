@@ -14,6 +14,7 @@ build/
 CMakeLists.txt.user
 *.qmlc
 *.jom
+*.pro.user
 
 # Системные файлы
 .DS_Store

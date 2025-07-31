@@ -3,7 +3,6 @@
 
 #include <QDialog>
 
-#include "cards.h"
 #include "processingCards.h"
 
 #include <utility>

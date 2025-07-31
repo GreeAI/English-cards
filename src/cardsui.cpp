@@ -3,12 +3,13 @@
 #include "eSpeakNG.h"
 
 #include <QMessageBox>
+#include <QPixmap>
 #include "cstdint"
 
 cardsui::cardsui(CardsProcessingLEG &cpLEG, QWidget *parent)
     : QDialog(parent)
-    , cpLEG_(cpLEG)
     , ui(new Ui::cardsui)
+    , cpLEG_(cpLEG)
 {
     ui->setupUi(this);
 

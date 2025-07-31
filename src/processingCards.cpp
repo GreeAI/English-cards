@@ -6,14 +6,11 @@
 
 using json = nlohmann::json;
 const uint8_t InitialValueSR = 1;
-const time_t SecondOneDay = 86400; // second in one day
 
 CardsProcessingLEG::CardsProcessingLEG(std::string &nameDeck) {
-    pathDeck_ = "../../decks/";
+    pathDeck_ = "C:/EnglishCards/decks/";
     pathDeck_ += nameDeck;
     pathDeck_ += ".json";
-
-    std::cout << pathDeck_;
 }
 
 void CardsProcessingLEG::saveCardsInDeck(const Card& card) {

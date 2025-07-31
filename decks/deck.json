@@ -91,76 +91,6 @@
         "sr": 5
     },
     {
-        "en": "spoon",
-        "id": 8,
-        "nextReview": 1753872409,
-        "ru": "ложка",
-        "sr": 2
-    },
-    {
-        "en": "to abhor",
-        "id": 19,
-        "nextReview": 1753699609,
-        "ru": "Ненавидеть",
-        "sr": 1
-    },
-    {
-        "en": "to abrogate",
-        "id": 20,
-        "nextReview": 1753699609,
-        "ru": "Отменить",
-        "sr": 1
-    },
-    {
-        "en": "to abstain",
-        "id": 21,
-        "nextReview": 1753699609,
-        "ru": "Воздержаться",
-        "sr": 1
-    },
-    {
-        "en": "To strengthen",
-        "id": 22,
-        "nextReview": 1753699609,
-        "ru": "Укрепить, усилить",
-        "sr": 1
-    },
-    {
-        "en": "To desist",
-        "id": 23,
-        "nextReview": 1753699609,
-        "ru": "Запретить",
-        "sr": 1
-    },
-    {
-        "en": "To yield",
-        "id": 24,
-        "nextReview": 1753699609,
-        "ru": "Уступить",
-        "sr": 1
-    },
-    {
-        "en": "To further",
-        "id": 25,
-        "nextReview": 1753699609,
-        "ru": "Продолжать",
-        "sr": 1
-    },
-    {
-        "en": "Commotion",
-        "id": 26,
-        "nextReview": 1753699609,
-        "ru": "Суета",
-        "sr": 1
-    },
-    {
-        "en": "devotion",
-        "id": 27,
-        "nextReview": 1753699609,
-        "ru": "Преданность",
-        "sr": 1
-    },
-    {
         "en": "Hello eSpeak",
         "id": 29,
         "nextReview": 1756036429,
@@ -236,5 +166,103 @@
         "nextReview": 1756114449,
         "ru": "Гладик",
         "sr": 5
+    },
+    {
+        "en": "to abhor",
+        "id": 19,
+        "nextReview": 1753956611,
+        "ru": "Ненавидеть",
+        "sr": 1
+    },
+    {
+        "en": "to abrogate",
+        "id": 20,
+        "nextReview": 1753956611,
+        "ru": "Отменить",
+        "sr": 1
+    },
+    {
+        "en": "to abstain",
+        "id": 21,
+        "nextReview": 1753956611,
+        "ru": "Воздержаться",
+        "sr": 1
+    },
+    {
+        "en": "To strengthen",
+        "id": 22,
+        "nextReview": 1753956611,
+        "ru": "Укрепить, усилить",
+        "sr": 1
+    },
+    {
+        "en": "To desist",
+        "id": 23,
+        "nextReview": 1753956611,
+        "ru": "Запретить",
+        "sr": 1
+    },
+    {
+        "en": "To yield",
+        "id": 24,
+        "nextReview": 1753956611,
+        "ru": "Уступить",
+        "sr": 1
+    },
+    {
+        "en": "To further",
+        "id": 25,
+        "nextReview": 1753956611,
+        "ru": "Продолжать",
+        "sr": 1
+    },
+    {
+        "en": "Commotion",
+        "id": 26,
+        "nextReview": 1753956611,
+        "ru": "Суета",
+        "sr": 1
+    },
+    {
+        "en": "devotion",
+        "id": 27,
+        "nextReview": 1753956611,
+        "ru": "Преданность",
+        "sr": 1
+    },
+    {
+        "en": "spoon",
+        "id": 8,
+        "nextReview": 1754134980,
+        "ru": "ложка",
+        "sr": 2
+    },
+    {
+        "en": "Test word for eSpeak",
+        "id": 35,
+        "nextReview": 1753962314,
+        "ru": "-",
+        "sr": 1
+    },
+    {
+        "en": "Test",
+        "id": 36,
+        "nextReview": 1753962356,
+        "ru": "s",
+        "sr": 1
+    },
+    {
+        "en": "test",
+        "id": 37,
+        "nextReview": 1753962377,
+        "ru": "",
+        "sr": 1
+    },
+    {
+        "en": "test",
+        "id": 38,
+        "nextReview": 1753962399,
+        "ru": "",
+        "sr": 1
     }
 ]

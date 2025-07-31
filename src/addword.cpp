@@ -4,10 +4,10 @@
 #include <QDebug>
 #include <QDir>
 
-addWord::addWord(CardsProcessingLEG &cpLeg ,QWidget *parent)
+addWord::addWord(CardsProcessingLEG &cpLeg, QWidget *parent)
     : QDialog(parent)
-    , cpLEG_(cpLeg)
     , ui(new Ui::addWord)
+    , cpLEG_(cpLeg)
 {
     ui->setupUi(this);
     setFixedSize(350, 600);

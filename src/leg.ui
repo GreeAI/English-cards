@@ -304,7 +304,7 @@ QLineEdit, QTextEdit {
      <string>Старт</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -317,8 +317,7 @@ QLineEdit, QTextEdit {
      <item>
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Выберете колоду:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -334,12 +333,12 @@ QLineEdit, QTextEdit {
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>230</y>
-      <width>153</width>
+      <x>80</x>
+      <y>220</y>
+      <width>191</width>
       <height>61</height>
      </rect>
     </property>
@@ -373,7 +372,7 @@ QLineEdit, QTextEdit {
      <x>0</x>
      <y>0</y>
      <width>354</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

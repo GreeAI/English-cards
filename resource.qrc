@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/resources">
-        <file>images/SpaceMenu.png</file>
-        <file>images/BlueMain.png</file>
-        <file>images/icon_voice_on.png</file>
-    </qresource>
-</RCC>
