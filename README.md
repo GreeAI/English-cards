@@ -56,3 +56,7 @@ git clone https://github.com/GreeAI/English-cards.git
 2. Выберите комплект (Kit) с вашим компилятором (MinGW/MSVC).
 3. Нажмите Собрать (Ctrl+B).
 4. Запустите (Ctrl+R)
+
+## Скачать установщик для прилежия (Только Windows!)
+### Установить [eSpeak-NG](https://github.com/espeak-ng/espeak-ng/releases/tag/1.52.0).msi
+### Установить программу [LEG_GreeAI](https://github.com/GreeAI/English-cards/releases/tag/1.0)
