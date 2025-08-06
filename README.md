@@ -52,6 +52,7 @@ git clone https://github.com/GreeAI/English-cards.git
 ```
 
 ### Сборка через QT
+
 1. Откройте файл .pro в Qt Creator.
 2. Выберите комплект (Kit) с вашим компилятором (MinGW/MSVC).
 3. Нажмите Собрать (Ctrl+B).

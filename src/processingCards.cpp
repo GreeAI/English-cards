@@ -4,13 +4,46 @@
 #include <fstream>
 #include <iostream>
 
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <limits.h>
+#include <unistd.h>
+#endif
+
 using json = nlohmann::json;
 const uint8_t InitialValueSR = 1;
 
-CardsProcessingLEG::CardsProcessingLEG(std::string &nameDeck) {
-    pathDeck_ = "C:/EnglishCards/decks/";
-    pathDeck_ += nameDeck;
-    pathDeck_ += ".json";
+std::string getDeckPath(const std::string& filename)
+{
+    std::string exePath;
+
+#ifdef _WIN32
+    char result[MAX_PATH];
+    DWORD count = GetModuleFileNameA(NULL, result, MAX_PATH);
+    if (count != 0) {
+        exePath = std::string(result);
+    }
+#else
+    char result[PATH_MAX];
+    ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
+    if (count != -1) {
+        exePath = std::string(result, count);
+    }
+#endif
+
+    if (!exePath.empty()) {
+        std::filesystem::path path(exePath);
+        std::filesystem::path deckPath = path.parent_path() / "decks" / (filename + ".json");
+        return deckPath.string();
+    }
+
+    return "";
+}
+
+CardsProcessingLEG::CardsProcessingLEG(std::string& nameDeck)
+{
+    pathDeck_ = getDeckPath(nameDeck);
 }
 
 void CardsProcessingLEG::saveCardsInDeck(const Card& card) {
@@ -36,7 +69,7 @@ void CardsProcessingLEG::saveDeckInJsonConst(const json& deck) {
     if(file.is_open()) {
         file << deck.dump(4);
     } else {
-        throw std::runtime_error("Failed to open file for writing");
+        throw std::runtime_error("Failed to open file for writing" + pathDeck_);
     }
 }
 
@@ -45,14 +78,15 @@ void CardsProcessingLEG::saveDeckInJson(json& deck) {
     if(file.is_open()) {
         file << deck.dump(4);
     } else {
-        throw std::runtime_error("Failed to open file for writing");
+        throw std::runtime_error("Failed to open file for writing" + pathDeck_);
     }
 }
 
 json CardsProcessingLEG::loadCard() {
     std::ifstream file(pathDeck_);
+
     if (!file.is_open()) {
-        throw std::runtime_error("Failed to open deck.json for reading");
+        throw std::runtime_error("Failed to open for reading " + pathDeck_);
     }
     json arr;
     if (file.peek() != std::ifstream::traits_type::eof()) {
@@ -77,15 +111,6 @@ void CardsProcessingLEG::removeCardFromId(const uint16_t id) {
     }
     saveDeckInJson(deck);
 }
-
-// bool CardsProcessingLEG::checkSameID(const json& deck, const uint16_t id) {
-//     for (const auto card : deck) {
-//         if (card["id"] == id) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
 
 size_t CardsProcessingLEG::CountId(const json& deck) {
     return deck.size();

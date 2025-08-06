@@ -10,8 +10,7 @@ using json = nlohmann::json;
 
 class CardsProcessingLEG {
 public:
-
-    CardsProcessingLEG(std::string &nameDeck);
+    CardsProcessingLEG(std::string& nameDeck);
 
     void saveCardsInDeck(const Card& card);
     json loadCard();
