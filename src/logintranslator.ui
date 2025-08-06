@@ -85,10 +85,10 @@ QComboBox QAbstractItemView {
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Активировать</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -110,7 +110,7 @@ QComboBox QAbstractItemView {
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
