@@ -1,6 +1,5 @@
-#include "leg.h"
-
 #include <QApplication>
+#include "leg.h"
 
 void debugEspeak()
 {
