@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 #nlohmann-json
 INCLUDEPATH += $$PWD/lib/json-develop/include
@@ -23,9 +23,12 @@ CONFIG += c++17
 SOURCES += \
     src/addword.cpp \
     src/cardsui.cpp \
+    src/logintranslator.cpp \
     src/main.cpp \
     src/leg.cpp \
     src/processingCards.cpp \
+    src/translator.cpp \
+    src/translatorui.cpp
 
 HEADERS += \
     src/SR.h \
@@ -34,12 +37,19 @@ HEADERS += \
     src/cardsui.h \
     src/eSpeakNG.h \
     src/leg.h \
-    src/processingCards.h
+    src/logintranslator.h \
+    src/processingCards.h \
+    src/translator.h \
+    src/translatorui.h
 
 FORMS += \
     src/addword.ui \
     src/cardsui.ui \
-    src/leg.ui
+    src/leg.ui \
+    src/logintranslator.ui \
+    src/translatorui.ui
+
+RC_ICONS = appicon.ico
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
