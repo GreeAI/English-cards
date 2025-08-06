@@ -22,16 +22,25 @@ public:
 
     bool checkSecretFile();
 
+    void clearKeysFile();
+
+    void setSourceLang(QString sourceLang);
+    void setTargetLang(QString targetLang);
+
 private:
     QNetworkAccessManager* manager;
 
     QString apiKey_ = "";
     QString folderId_ = "";
 
-    const QString targetLang_ = "ru";
+    QString sourceLang_ = "en";
+    QString targetLang_ = "ru";
 
     QString appDir = QCoreApplication::applicationDirPath();
     QString filePath = QDir(appDir).filePath("secret/keys.txt");
+
+    const QString getSourceLang() { return sourceLang_; }
+    const QString getTargetLang() { return targetLang_; }
 };
 
 #endif // TRANSLATOR_H

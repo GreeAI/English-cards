@@ -90,10 +90,10 @@ QComboBox QAbstractItemView {
     padding: 0;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Введите слово на английском:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Введите слово на Английском:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="le_en">
+  <widget class="QLineEdit" name="le_first">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -103,7 +103,7 @@ QComboBox QAbstractItemView {
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="le_ru">
+  <widget class="QLineEdit" name="le_second">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -137,6 +137,19 @@ QComboBox QAbstractItemView {
    </property>
    <property name="text">
     <string>Добавить слово</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_change_lang">
+   <property name="geometry">
+    <rect>
+     <x>85</x>
+     <y>300</y>
+     <width>180</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Англ-&gt;Рус</string>
    </property>
   </widget>
  </widget>

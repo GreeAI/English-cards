@@ -43,7 +43,8 @@ QString translator::translate(const QString &text)
     QJsonObject requestBody;
     requestBody["folderId"] = folderId_;
     requestBody["texts"] = QJsonArray{text};
-    requestBody["targetLanguageCode"] = targetLang_;
+    requestBody["targetLanguageCode"] = getTargetLang();
+    requestBody["sourceLanguageCode"] = getSourceLang();
 
     // 5. Отправка запроса
     QNetworkReply *reply = manager->post(request, QJsonDocument(requestBody).toJson());
@@ -120,4 +121,24 @@ bool translator::checkSecretFile()
     }
 
     return true;
+}
+
+void translator::clearKeysFile()
+{
+    QFile file(filePath);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        qDebug() << "Failed to clear file:" << file.errorString();
+        return;
+    }
+    file.close();
+}
+
+void translator::setSourceLang(QString sourceLang)
+{
+    sourceLang_ = sourceLang;
+}
+
+void translator::setTargetLang(QString targetLang)
+{
+    targetLang_ = targetLang;
 }
