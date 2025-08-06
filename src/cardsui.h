@@ -2,6 +2,8 @@
 #define CARDSUI_H
 
 #include <QDialog>
+#include <QLabel>
+
 #include "cards.h"
 #include "processingCards.h"
 
@@ -44,6 +46,9 @@ private slots:
 
 private:
     Ui::cardsui *ui;
+    QLabel *&lblEN; // Label - английские слова
+    QLabel *&lblRU; // Label - русские слова
+
     CardsProcessingLEG &cpLEG_;
     std::vector<Card> cards_;
     size_t currentCardIndex_ = 0;

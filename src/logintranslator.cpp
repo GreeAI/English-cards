@@ -10,6 +10,9 @@ loginTranslator::loginTranslator(QWidget *parent)
     , ui(new Ui::loginTranslator)
 {
     ui->setupUi(this);
+    setFixedSize(400, 300);
+    setWindowFlag(Qt::WindowMaximizeButtonHint, false);
+    setWindowFlag(Qt::WindowMinimizeButtonHint, false);
 }
 
 loginTranslator::~loginTranslator()

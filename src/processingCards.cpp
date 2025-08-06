@@ -96,21 +96,21 @@ json CardsProcessingLEG::loadCard() {
 
     return arr;
 }
+// Реализовать возможность удаление карт по en words
+// void CardsProcessingLEG::removeCardFromId(const uint16_t id) {
+//     std::fstream file(pathDeck_);
+//     json deck = loadCard();
 
-void CardsProcessingLEG::removeCardFromId(const uint16_t id) {
-    std::fstream file(pathDeck_);
-    json deck = loadCard();
+//     auto it = std::find_if(deck.begin(), deck.end(),
+//                            [id](const json& card) {
+//                                return card["id"] == id;
+//                            });
 
-    auto it = std::find_if(deck.begin(), deck.end(),
-                           [id](const json& card) {
-                               return card["id"] == id;
-                           });
-
-    if (it != deck.end()) {
-        deck.erase(it);
-    }
-    saveDeckInJson(deck);
-}
+//     if (it != deck.end()) {
+//         deck.erase(it);
+//     }
+//     saveDeckInJson(deck);
+// }
 
 size_t CardsProcessingLEG::CountId(const json& deck) {
     return deck.size();

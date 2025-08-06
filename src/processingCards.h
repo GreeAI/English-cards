@@ -13,18 +13,8 @@ public:
     CardsProcessingLEG(std::string& nameDeck);
 
     void saveCardsInDeck(const Card& card);
-    json loadCard();
 
-    void saveDeckInJsonConst(const json& deck);
-    void saveDeckInJson(json& deck);
-
-    void removeCardFromId(const uint16_t id);
-
-    //bool checkSameID(const json& deck, const uint16_t id);
-
-    size_t CountId(const json& deck);
-
-    void reloadCardTimeFromId(const std::vector<Card> &cards, json& deck);
+    //void removeCardFromId(const uint16_t id);
 
     std::vector<Card> startRepeat();
 
@@ -33,6 +23,15 @@ private:
     size_t count_id_ = 0;
     std::vector<Card> cards_for_repeat_;
     std::string pathDeck_;
+
+    json loadCard();
+
+    void saveDeckInJsonConst(const json& deck);
+    void saveDeckInJson(json& deck);
+
+    size_t CountId(const json& deck);
+
+    void reloadCardTimeFromId(const std::vector<Card>& cards, json& deck);
 };
 
 #endif // PROCESSINGCARDS_H

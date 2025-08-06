@@ -9,6 +9,8 @@
 cardsui::cardsui(CardsProcessingLEG &cpLEG, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::cardsui)
+    , lblEN(ui->lbl_eng)
+    , lblRU(ui->lbl_ru)
     , cpLEG_(cpLEG)
 {
     ui->setupUi(this);
@@ -42,7 +44,7 @@ void cardsui::start() {
 void cardsui::showCurrentCard() {
     if (currentCardIndex_ < cards_.size()) {
         const Card& current = cards_[currentCardIndex_];
-        ui->lbl_eng->setText(QString::fromStdString(current.en));
+        lblEN->setText(QString::fromStdString(current.en));
     } else {
         QMessageBox::information(this, "Информация", "Карточки закончились");
         this->close();
@@ -59,21 +61,21 @@ void cardsui::showTranslate() {
     }
 
     const Card& current = cards_[showCards_];
-    ui->lbl_ru->setText(QString::fromStdString(current.ru));
+    lblRU->setText(QString::fromStdString(current.ru));
 }
 
 void cardsui::changeSR(const uint8_t newSR) {
     if(cards_.empty() || showCards_ >= cards_.size()) {
         QMessageBox::information(this, "Информация", "Сегодня нет карточек для повторения");
         this->close();
-        ui->lbl_eng->setText("Нет слов для повторения");
+        lblEN->setText("Нет слов для повторения");
         return;
     }
     cards_[showCards_].sr = newSR;
 
     showCurrentCard();
     currentCardIndex_++;
-    ui->lbl_ru->setText("Перевод");
+    lblRU->setText("Перевод");
 }
 
 void cardsui::speakEngWord()
