@@ -52,12 +52,24 @@ git clone https://github.com/GreeAI/English-cards.git
 ```
 
 ### Сборка через QT
-
 1. Откройте файл .pro в Qt Creator.
 2. Выберите комплект (Kit) с вашим компилятором (MinGW/MSVC).
 3. Нажмите Собрать (Ctrl+B).
 4. Запустите (Ctrl+R)
 
 ## Скачать установщик для приложения (Только Windows!)
-### Установить [eSpeak-NG](https://github.com/espeak-ng/espeak-ng/releases/tag/1.52.0).msi
+### Установить [eSpeak-NG.msi](https://github.com/espeak-ng/espeak-ng/releases/tag/1.52.0)
 ### Установить программу [LEG_GreeAI](https://github.com/GreeAI/English-cards/releases/tag/1.0)
+
+# Работа в приложение
+
+## Перевод карточек
+Чтобы получить API и Folder ключи, нужно зарегистрироваться в Yandex.Cloud и выполнить шаги, которые прописаны [здесь](https://yandex.cloud/ru/docs/translate/quickstart).
+
+После регистрации вы получите:
+
+API-ключ для доступа к сервису перевода
+
+Folder ID (идентификатор каталога)
+
+Эти данные потребуются для настройки функции перевода в приложении.
