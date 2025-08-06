@@ -26,9 +26,10 @@ private slots:
 
     void on_le_choiceDeck_textChanged(const QString &arg1);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::LEG *ui;
-    std::string nameDeck_;
     CardsProcessingLEG cpLEG_;
 
     void setBackgroundWidget();

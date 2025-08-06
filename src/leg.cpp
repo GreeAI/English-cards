@@ -1,10 +1,13 @@
 #include "leg.h"
-#include "ui_leg.h"
 #include "addword.h"
 #include "cardsui.h"
+#include "translatorui.h"
+#include "ui_leg.h"
 
 #include <QPixmap>
 #include <QMessageBox>
+
+#include <QDir>
 
 LEG::LEG(std::string name, QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +20,6 @@ LEG::LEG(std::string name, QWidget *parent)
     setWindowFlag(Qt::WindowMaximizeButtonHint, false);
     setWindowFlag(Qt::WindowMinimizeButtonHint, false);
 
-    setBackgroundWidget();
     ui->lbl_how_deck->setText(QString::fromStdString(name));
     ui->lbl_how_deck->setAlignment(Qt::AlignCenter);
 
@@ -29,8 +31,6 @@ LEG::~LEG()
 
 }
 
-
-
 void LEG::on_pb_add_word_clicked()
 {
     hide();
@@ -39,8 +39,6 @@ void LEG::on_pb_add_word_clicked()
     window.exec();
     show();
 }
-
-
 
 void LEG::on_pb_start_clicked()
 {
@@ -51,19 +49,19 @@ void LEG::on_pb_start_clicked()
     show();
 }
 
-void LEG::setBackgroundWidget() {
-    QPixmap backgroundImage(":/resources/images/BlueMain.png");
-    QPalette palette;
-    palette.setBrush(QPalette::Window, QBrush(backgroundImage));
-    ui->centralwidget->setAutoFillBackground(true);
-    ui->centralwidget->setPalette(palette);
-}
-
-
 void LEG::on_le_choiceDeck_textChanged(const QString &arg1)
 {
     std::string nameDeck = arg1.toStdString();
+
     cpLEG_ = CardsProcessingLEG(nameDeck);
     ui->lbl_how_deck->setText(arg1);
 }
 
+void LEG::on_pushButton_clicked()
+{
+    hide();
+    translatorUI trans(cpLEG_, this);
+    trans.setModal(true);
+    trans.exec();
+    show();
+}
